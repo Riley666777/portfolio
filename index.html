@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Riley</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 導航欄 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Riley</div>
+            <ul class="nav-menu">
+                <li><a href="#home">首頁</a></li>
+                <li><a href="#projects">作品</a></li>
+                <li><a href="#about">關於</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 首頁 Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>你好，我是 Riley</h1>
+        </div>
+    </section>
+
+    <!-- 作品展示 Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>我的作品</h2>
+            <div class="projects-grid" id="projectsGrid">
+                <!-- 動態加載項目 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 關於我 Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>關於我</h2>
+            <div class="about-content">
+                <p>
+                    我是一名開發者，對 AI Agent 和自動化工具充滿熱情。
+                    喜歡通過 Telegram Bot 等形式構建實用的小應用，
+                    幫助日常生活變得更便捷有趣。
+                </p>
+                <p>
+                    目前在探索更多 AI 應用的可能性。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 項目詳情 Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <div id="modalBody">
+                <!-- 動態加載 -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 圖片放大預覽 Modal -->
+    <div id="imageModal" class="modal">
+        <div class="image-modal-content">
+            <button class="modal-close" onclick="closeImageModal()">&times;</button>
+            <img id="enlargedImage" src="" alt="放大預覽">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Riley. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
