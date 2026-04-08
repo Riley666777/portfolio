@@ -6,36 +6,37 @@ const projectsData = [
         tag: "AI 工具",
         tagColor: "green",
         emoji: "💰",
-        description: "一個智能記帳 Bot，透過 Telegram 快速記錄日常支出。採用 Google Gemini 2.5 模型進行語意理解，精準識別消費類別。支援自動容錯切換、即時錯誤監控，確保 24/7 穩定運作。",
+        description: "一個智能記帳 Bot，透過 Telegram 快速記錄日常支出。採用 Google Gemini 模型進行語意理解，識別消費類別。支援自動容錯切換、錯誤監控，確保穩定運作。",
         link: "#",
         details: {
             tech: [
                 { name: "Telegram Bot API", desc: "前端入口 - 提供跨平台、零門檻的交互介面" },
                 { name: "Google Gemini 2.5 / 3.1 Flash Lite", desc: "智能引擎 - 進行語意理解、邏輯判斷和內容分類" },
-                { name: "Google Apps Script", desc: "邏輯中樞 - 雲端自動化控制中心，無需維護實體伺服器" },
-                { name: "Google Sheets", desc: "數據倉儲 - 實時同步和視覺化報表" }
+                { name: "Google Apps Script", desc: "後端邏輯 - 自動化流程控制，無需維護實體伺服器" },
+                { name: "Google Sheets", desc: "資料庫 - 實時同步和視覺化報表" }
             ],
             features: [
-                "智慧分類與語義解析 - 透過 Prompt Engineering，精準理解模糊輸入（如「唱歌」→ 娛樂、「高麗菜」→ 生鮮）",
-                "自動容錯機制 - 雙模型切換邏輯，當主模型達流量限制時自動切換備援方案",
-                "即時錯誤監控 - 內建 try...catch 異常處理，主動回報 API 異常至終端",
-                "數據即時同步 - 串接 Google Sheets 實現視覺化報表",
-                "無伺服器架構 - 完全基於 Google Apps Script，免維護成本"
+                "智慧分類 - 输入像『唱歌』會自動理解成娛樂，『高麗菜』就知道是生鮮",
+                "自動容錯 - 主要用的 AI 模型流量滿了，會自動換備用模型繼續跑",
+                "自動同步 - 每筆消費都會自動存進 Google Sheets",
+                "零維護成本 - 完全跑在 Google Apps Script 上面，我不用自己開伺服器",
+                "圖片 - 可以上傳收據或出貨單，儲存多筆資料"
             ],
             future: ["週報/月報自動生成與分析", "分類超支預警提醒", "多輪對話財務諮詢"],
             screenshots: [
                 { title: "Telegram 聊天介面", desc: "用戶在 Telegram 上輸入記帳訊息", image: "./picture/tool_A_0.jfif" },
-                { title: "Google Sheets 資料", desc: "自動同步至 Google Sheets", image: "./picture/tool_A_1.jfif" }
+                { title: "Google Sheets 資料", desc: "自動同步至 Google Sheets", image: "./picture/tool_A_1.jfif" },
+                { title: "多筆新增圖片", desc: "一次新增多筆收據或出貨單至 Google Sheets", image: "./picture/tool_A_2.jfif" }
             ]
         }
     },
     {
         id: 2,
-        title: "我的 AI Agent",
+        title: "AI Agent",
         tag: "我的第一隻小龍蝦",
         tagColor: "purple",
         emoji: "🤖",
-        description: "部署在 Oracle Cloud 上的個人 AI 助理。透過 Telegram 即時互動，使用 OpenRouter 免費模型自動選擇。這是我第一個 Agent 實踐，展示基礎的聊天功能與雲端安全部署。為未來高階功能迭代奠定基礎。",
+        description: "部署在 Oracle Cloud 上的個人 AI 助理。透過 Telegram 即時互動，使用 OpenRouter 免費模型自動選擇。這是我第一個 Agent 實踐，第一次養開始養龍蝦。",
         link: "#",
         details: {
             tech: [
@@ -73,15 +74,18 @@ const projectsData = [
                 }
             ],
             features: [
-                "不間斷運行 - 雲端部署確保系統全天候在線，無需個人電腦保持開機",
-                "免費模型對話 - 使用 OpenRouter 自動選擇免費開源模型，支援基礎問答與文本處理",
-                "即時 Telegram 互動 - 透過手機即時交互，體驗 AI 對話功能",
-                "簡單功能實踐 - 展示基礎的 Agent 框架與自動化邏輯",
-                "完整安全防護 - Token 驗證、配對機制、定期安全審計，確保資料安全"
+                "24小時在線 - 放在雲端上跑著，隨時都可以問",
+                "用免費 AI 模型 - OpenRouter 的免費模型，可以聊天問問題",
+                "用手機就能聊 - 透過 Telegram 隨時隨地跟 Agent 互動",
+                "簡單好用 - 基礎的聊天功能，我第一個 Agent 的實踐",
+                "安全防護 - 有 Token 驗證，只有我核准的帳號才能用",
+                "天氣提醒 - 每天早上自動發送內湖的天氣和穿衣建議",
+                "自動化機票查詢 - 自動查詢機票價格，低於 5000 元時通知我"
             ],
-            future: ["未來使用高階模型 (Claude 3, GPT-4) 以支援更複雜推理", "實現自動化排程功能 (Cron Jobs 天氣推播、日程提醒、機票低價提醒)", "建立持久化記憶系統與個人知識庫"],
+            future: ["未來可能會使用高階模型 (Claude 3, GPT-4) 以支援更複雜推理", "建立持久化記憶系統與個人知識庫"],
             screenshots: [
-                { title: "Agent 對話介面", desc: "透過 Telegram 與 AI Agent 的即時互動對話", image: "./picture/tool_B_0.jfif" }
+                { title: "天氣提醒", desc: "每天上午７：３０提醒我內湖天氣", image: "./picture/tool_B_1.jfif" },
+                { title: "自動化機票查詢", desc: "自動查詢機票價格，低於 5000 元時通知", image: "./picture/tool_B_2.jfif" }
             ]
         }
     }
@@ -178,16 +182,31 @@ function openModal(projectId) {
     // 構建架構設計 HTML
     let architectureHtml = '';
     if (project.details.architecture && project.details.architecture.length > 0) {
+        const topArchs = project.details.architecture.slice(0, -1);
+        const bottomArch = project.details.architecture.slice(-1);
+
         architectureHtml = `
             <div class="architecture-sections">
-                ${project.details.architecture.map(arch => `
-                    <div class="architecture-card">
-                        <div class="architecture-title">${arch.title}</div>
-                        <ul class="architecture-list">
-                            ${arch.items.map(item => `<li>${item}</li>`).join('')}
-                        </ul>
-                    </div>
-                `).join('')}
+                <div class="architecture-row">
+                    ${topArchs.map(arch => `
+                        <div class="architecture-card">
+                            <div class="architecture-title">${arch.title}</div>
+                            <ul class="architecture-list">
+                                ${arch.items.map(item => `<li>${item}</li>`).join('')}
+                            </ul>
+                        </div>
+                    `).join('')}
+                </div>
+                <div class="architecture-row full-width">
+                    ${bottomArch.map(arch => `
+                        <div class="architecture-card">
+                            <div class="architecture-title">${arch.title}</div>
+                            <ul class="architecture-list">
+                                ${arch.items.map(item => `<li>${item}</li>`).join('')}
+                            </ul>
+                        </div>
+                    `).join('')}
+                </div>
             </div>
         `;
     }
